@@ -99,19 +99,6 @@ def task_4_nastya():
                 print("Строка " + str(i+1) + ", позиция " + str(match.start()+1) +
                       " : найдено '{}'".format(line[match.start():match.end()]))
 
-# variant5
-# найдите все номера телефонов – подстроки вида
-# «(000)1112233» или «(000)111-22-33».
-def task_4_yuri():
-    file_name = "task4_yuri.txt"
-    masks = ["\(\d{3}\)\d{7}", "\(\d{3}\)\d{3}-\d{2}-\d{2}"]
-    with open(file_name) as file:
-        for i, line in enumerate(file):
-            for mask in masks:
-                for match in re.finditer(mask, line):
-                    print("Строка " + str(i+1) + ", позиция " + str(match.start()+1) +
-                          " : найдено '{}'".format(line[match.start():match.end()]))
-
 # ----------------5
 # Введите с клавиатуры текст. Программно найдите в нем и выведите
 # отдельно все слова, которые начинаются с большого латинского
